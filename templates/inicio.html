@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid text-center">
+    <div class="card container-fluid my-5" style="width: 80rem;">
+        <div class="card-body">
+            <h5 class="card-title fs-1">Un vistazo a mi vida</h5>
+            <p class="card-text fs-2">{{ bienvenida }}, me llamo Raúl Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam nemo quisquam cumque dolores asperiores ab eum consectetur vitae quasi voluptates? Tempora inventore ex officiis rerum a excepturi quidem nihil modi.</p>
+            <p class="card-text fs-4">{{ mensaje }}</p>
+            <a class="btn btn-secondary" href="/projects">Ve mis proyectos</a>
+        </div>
+        <img src="{% static 'img/yo.jpg' %}" class="card-img-bottom img-fluid" alt="...">
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container-fluid text-center">
+
+    <!-- Posibilidad: Agregar un selector para decidir si ver proyectos en desarrollo o finalizados -->
+
+    {% for project in projects %}
+        <div class="card container-fluid my-5" style="width: 60rem;">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title fs-1"> {{ project.title }}</h5>
+                        <p class="card-text fs-2">{{ project.description }}</p>
+                        <p>
+                            {% if project.in_progress %}
+                            <span class="badge bg-secondary">En desarrollo</span>
+                            {% else %}
+                                <span class="badge bg-success">Finalizado</span>
+                            {% endif %}
+                        </p>
+                    </div> 
+                    <div class="col">
+                        <img src="{% static 'img/'|add:project.image %}" class="img-fluid rounded mt-3" style="max-height: 200px; object-fit: cover;" alt="{{ project.title }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
