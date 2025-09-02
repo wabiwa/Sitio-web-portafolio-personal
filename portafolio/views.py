@@ -31,11 +31,21 @@ def Projects(request):
     "in_progress":False, "image":"img2.png"},
     {"title":"Proyecto C","description":"Análisis de datos con Python",
     "in_progress":True, "image":"img3.jpg"},
+    {"title":"Proyecto D","description":"Manejo de inventario en sitio web con JS",
+    "in_progress":False, "image":"img4.png"},
     ]
 
-    proyectos_en_progreso = [p for p in projects if p["in_progress"]]
+    status=request.GET.get("status", "en_progreso")
 
-    data = {"nombre":"Projects", "projects":proyectos_en_progreso}
+    if status == "finalizados":
+        proyectos_filtrados = [p for p in projects if not p["in_progress"]]
+        titulo = "Proyectos finalizados"
+    else:
+        proyectos_filtrados = [p for p in projects if p["in_progress"]]
+        titulo = "Proyectos en progreso"
+
+
+    data = {"nombre":"Projects", "projects":proyectos_filtrados, "status":status, "titulo":titulo}
 
     return render(request, 'projects.html', data)
 

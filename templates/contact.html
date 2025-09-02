@@ -2,22 +2,23 @@
 
 {% block content %}
 
-<div class="container-fluid">
-    <form>
-        <div class="mb-3">
+<div class="container">
+    <form class="shadow rounded form">
+        <h1 class="text-center my-4">Formulario de Contacto</h1>
+        <div class="mb-3 text-center">
             <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre">
+            <input type="text" class="form-control" id="nombre" placeholder="Juanito Perez" required>
         </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <div class="mb-3 text-center">
+            <label for="email" class="form-label" >Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="qwerty@uiop.as" required>
+            <div id="emailHelp" class="form-text">Este correo no será compartido</div>
         </div>
-        <div class="mb-3">
-            <label for="mensaje" class="form-label">Mensaje</label>
-            <input type="text" class="form-control" id="mensaje">
+        <div class="mb-3 text-center">
+            <label for="mensaje" class="form-label" >Mensaje</label>
+            <textarea class="form-control" id="mensaje" rows="4" placeholder="..." required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-lg btn-primary mx-auto d-block">Enviar</button>
     </form>
 </div>
 

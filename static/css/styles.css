@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Keyboard&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    background-color: #d5ffe771;
+    font-family: "Inter", sans-serif;
+    color: #333;
+}
+
+.card {
+    background-color: rgba(220, 255, 220, 0.61);
+    border: none; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.26);
+}
+
+.card-title, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2b2b2b; 
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+    font-weight: 750;
+}
+
+.titulo-navbar{
+    font-family: 'Libertinus Keyboard', monospace;
+    color: #2b2b2b; 
+    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.card-text, p, span {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+label{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+.navbar, footer {
+    background-color: #d1f7e4d5;
+}
+
+.boton-navbar:hover {
+    background-color: rgba(220, 255, 220, 0.61);
+}
+
+.boton-desarrollo{
+    background-color: #9999996b;
+}
+
+.boton-desarrollo:hover {
+    background-color: #6d6d6dd3;
+}
+
+.boton-finalizado{
+    background-color: #02802c6b;
+}
+
+.boton-finalizado:hover {
+    background-color: #00991ad3;
+}
+
+.form {
+    background-color: rgba(220, 255, 220, 0.61);
+    border: none; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+    margin-top: 100px;
+    padding: 10px;
+}
+
+.col-texto{
+    margin-top: 30px;
+}
