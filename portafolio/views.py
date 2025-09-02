@@ -12,13 +12,13 @@ def Inicio(request):
 
     if mañana <= hora_actual < tarde:
         bienvenida = "Buenos días"
-        mensaje = "Al que madruga dios lo ayuda!"
+        mensaje = "empezó el día, disfruta de tu tarde"
     elif tarde <= hora_actual < noche:
         bienvenida = "Buenas tardes"
-        mensaje = "¿Ya almorzaste?"
+        mensaje = "ya terminó la mañana ¿almorzaste?"
     else:
         bienvenida = "Buenas noches"
-        mensaje = "¿No tienes sueño?"
+        mensaje = "el día está por terminar, ¿no tienes sueño?"
 
     data = {"nombre":"Inicio", "bienvenida":bienvenida, "mensaje":mensaje}
 
